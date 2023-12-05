@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 02</title>
+</head>
+
+<body>
+    <script>
+        class Cylinder {
+            #_height;
+            #_radius;
+            constructor(height, radius) {
+                this.#_height = height;
+                this.#_radius = radius;
+            }
+
+            get height() {
+                return this.#_height;
+            }
+
+            set height(value) {
+                this.#_height = value;
+            }
+
+            get radius() {
+                return this.#_radius;
+            }
+
+            set radius(value) {
+                this.#_radius = value;
+            }
+
+            getVolume() {
+                return Math.PI * Math.pow(this.#_radius, 2) * this.#_height;
+            }
+        }
+
+        let cylinder1 = new Cylinder(6, 2);
+        let cylinder2 = new Cylinder(3, 2);
+
+        console.log("Объем цилиндра 1:", cylinder1.getVolume());
+        console.log("Объем цилиндра 2:", cylinder2.getVolume());
+    </script>
+</body>
+
+</html>
